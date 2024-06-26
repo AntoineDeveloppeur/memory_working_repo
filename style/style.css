@@ -1,67 +1,58 @@
 @charset "UTF-8";
-/* Créer les variables de couleur */
-:root {
-    $color-1: rgba(211, 233, 197, 1);
-    $color-2: rgba(189, 224, 167, 1);
-    $color-3: rgba(127, 181, 91, 1);
-    $color-4: rgba(95, 157, 55, 1);
-    $color-main: white;
-}
-
 /* Comportement par défaut */
 * {
-    font-family: Calibri;
-    color: var($color-main);
-    padding: 0rem;
-    margin: 0rem;
+  font-family: Calibri;
+  color: white;
+  padding: 0rem;
+  margin: 0rem;
 }
 
 a {
-    text-decoration: none;
+  text-decoration: none;
 }
 
 body {
-    background-color: white;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    align-items: center;
+  background-color: white;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
 }
 
 #logo-et-nom-du-jeu {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .logo {
-    height: 80px;
+  height: 80px;
 }
 
 h1,
 p {
-    padding: 0.3rem;
-    margin: 1rem;
+  padding: 0.3rem;
+  margin: 1rem;
 }
 
 h1 {
-    text-align: center;
+  text-align: center;
 }
 
 h1 strong {
-    font-size: 3rem;
+  font-size: 3rem;
 }
 
 p,
 .boutton {
-    font-size: 2rem;
+  font-size: 2rem;
 }
 
 .boutton {
-    background-color: var($color-1);
-    color: var($color-4);
-    /* border-radius: 2rem; */
-    padding: 0rem 2rem 0rem 2rem;
-    text-decoration: none;
-    font-size: 1.6rem;
-} /*# sourceMappingURL=style.css.map */
+  background-color: rgb(211, 233, 197);
+  color: rgb(95, 157, 55);
+  /* border-radius: 2rem; */
+  padding: 0rem 2rem 0rem 2rem;
+  text-decoration: none;
+  font-size: 1.6rem;
+}/*# sourceMappingURL=style.css.map */
