@@ -1,56 +1,66 @@
+@charset "UTF-8";
 #encadre-du-jeu {
-    background-color: var(--rgba-primary-3);
+    background-color: var($color-3);
     border-radius: 2rem;
     padding: 1rem 0.5rem 3rem 0.5rem;
     margin: 1rem;
     height: auto;
     width: 90vw;
-    z-index:-3;
+    z-index: -3;
 }
+
 #regle-du-jeu {
     position: relative;
     margin: 2rem;
     z-index: 2;
-    background: var(--rgba-primary-3);
+    background: var($color-3);
 }
+
 #regle-du-jeu h2 {
     font-size: 1.7rem;
-    z-index:4;
+    z-index: 4;
 }
+
 #regle-du-jeu p {
     margin: 0px;
 }
+
 #regle-du-jeu:before {
-    content: "";
+    content: '';
     position: absolute;
     left: -0.5rem;
     top: -0.5rem;
     height: 30%;
     width: 10%;
-    background-color: var(--rgba-primary-4);
-    z-index: 1
+    background-color: var($color-4);
+    z-index: 1;
 }
+
 #regle-du-jeu::after {
-    content: "";
+    content: '';
     position: absolute;
     right: 0.5rem;
     bottom: 0.5rem;
     height: 30%;
     width: 10%;
-    background-color: var(--rgba-primary-4);
-    z-index: 1
+    background-color: var($color-4);
+    z-index: 1;
 }
+
 .enonce {
     font-size: 1.5rem;
 }
-.carte-a-retourner{
+
+.carte-a-retourner {
     position: relative;
 }
+
 .photo {
     position: relative;
     border-top: 4px black;
     max-height: 30vh;
 }
+
 /* Positionnement de l'ensemble cartes + message personnalisé */
 #CartesEtMessages {
     display: grid;
@@ -58,6 +68,7 @@
     place-items: center;
     grid-gap: 0.5rem;
 }
+
 /* Positionnement des cartes */
 .grid-cartes {
     display: grid;
@@ -65,30 +76,41 @@
     grid-gap: 1rem;
     justify-content: center;
 }
+
 /* Permet d'afficher toute la photo en respectant son ratio d'orgine */
-.grid-cartes, .photo, .dos-de-carte, .carte-carroussel {
+.grid-cartes,
+.photo,
+.dos-de-carte,
+.carte-carroussel {
     width: 100%;
     height: 100%;
+    -o-object-fit: cover;
     object-fit: cover;
 }
+
 /* Positionnement du dos de carte sur la photo grâce à absolute */
-.dos-de-carte, .photo-hover {
-    position : absolute;
+.dos-de-carte,
+.photo-hover {
+    position: absolute;
     top: 0px;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 .photo-hover {
     display: none;
 }
+
 .photo-hover:hover {
-    background-color: rgba( 0,  0,  0,0.5);
+    background-color: rgba(0, 0, 0, 0.5);
     display: flex;
 }
+
 .photorevele {
     z-index: 1;
 }
+
 /* Trouver un moyen de remettre en forme la division #message */
 #message {
     padding: 1rem;
@@ -97,22 +119,43 @@
     height: auto;
     padding: 1rem 0.5rem 0.5rem 0.5rem;
 }
-.MessagePersonnalise, #ColonneVide {
+
+.MessagePersonnalise,
+#ColonneVide {
     margin-left: auto;
     margin-right: auto;
-    padding-bottom: 0.5rem;  
+    padding-bottom: 0.5rem;
     display: flex;
     align-items: center;
     justify-content: center;
 }
+
 .MessagePersonnalise {
-    color: var(--rgba-primary-4);
+    color: var($color-4);
     font-size: 1.2rem;
     text-align: center;
 }
-.Carte1 { order:1;}
-.Carte2 { order:2;}
-.Carte3 { order:3;}
-.Carte4 { order:4;}
-.Carte5 { order:5;}
-.Carte6 { order:6;}
+
+.Carte1 {
+    order: 1;
+}
+
+.Carte2 {
+    order: 2;
+}
+
+.Carte3 {
+    order: 3;
+}
+
+.Carte4 {
+    order: 4;
+}
+
+.Carte5 {
+    order: 5;
+}
+
+.Carte6 {
+    order: 6;
+} /*# sourceMappingURL=jeu.css.map */
