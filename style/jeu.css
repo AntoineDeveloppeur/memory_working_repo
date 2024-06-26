@@ -11,7 +11,9 @@
 
 #regle-du-jeu {
   position: relative;
-  margin: 2rem;
+  max-width: 90%;
+  margin-left: auto;
+  margin-right: auto;
   z-index: 2;
   background: rgb(127, 181, 91);
 }
@@ -32,8 +34,9 @@
   top: -0.5rem;
   height: 30%;
   width: 10%;
-  background-color: rgb(95, 157, 55);
   z-index: 1;
+  border-top: 2px solid #e6e6e6;
+  border-left: 2px solid #e6e6e6;
 }
 
 #regle-du-jeu::after {
@@ -43,8 +46,9 @@
   bottom: 0.5rem;
   height: 30%;
   width: 10%;
-  background-color: rgb(95, 157, 55);
   z-index: 1;
+  border-bottom: 2px solid #e6e6e6;
+  border-right: 2px solid #e6e6e6;
 }
 
 .enonce {
