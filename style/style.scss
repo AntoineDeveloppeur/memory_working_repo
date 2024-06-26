@@ -1,0 +1,59 @@
+@use 'variables' as vars;
+
+/* Comportement par défaut */
+* {
+    font-family: Calibri;
+    color: vars.$color-main;
+    padding: 0rem;
+    margin: 0rem;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: white;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+#logo-et-nom-du-jeu {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo {
+    height: 80px;
+}
+
+h1,
+p {
+    padding: 0.3rem;
+    margin: 1rem;
+}
+
+h1 {
+    text-align: center;
+}
+
+h1 strong {
+    font-size: 3rem;
+}
+
+p,
+.boutton {
+    font-size: 2rem;
+}
+
+.boutton {
+    background-color: vars.$color-1;
+    color: vars.$color-4;
+    /* border-radius: 2rem; */
+    padding: 0rem 2rem 0rem 2rem;
+    text-decoration: none;
+    font-size: 1.6rem;
+}
