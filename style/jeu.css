@@ -48,12 +48,19 @@ main {
   border-right: 2px solid #e6e6e6;
 }
 
-/* Positionnement de l'ensemble cartes + message personnalisé */
 #CartesEtMessages {
   display: grid;
   grid-template-columns: 20% 60% 20%;
   place-items: center;
   grid-gap: 0.5rem;
+}
+
+/* Positionnement des cartes */
+.grid-cartes {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-gap: 1rem;
+  justify-content: center;
 }
 
 .carte-a-retourner {
@@ -66,14 +73,7 @@ main {
   max-height: 30vh;
 }
 
-/* Positionnement des cartes */
-.grid-cartes {
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-  grid-gap: 1rem;
-  justify-content: center;
-}
-
+/* Positionnement de l'ensemble cartes + message personnalisé */
 /* Permet d'afficher toute la photo en respectant son ratio d'orgine */
 .grid-cartes,
 .photo,
