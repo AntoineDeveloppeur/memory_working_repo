@@ -9,7 +9,7 @@ main {
   z-index: -3;
 }
 
-#regle-du-jeu {
+.regle-du-jeu {
   position: relative;
   max-width: 90%;
   margin-left: auto;
@@ -17,17 +17,15 @@ main {
   z-index: 2;
   background: rgb(127, 181, 91);
 }
-
-#regle-du-jeu h2 {
+.regle-du-jeu__titre {
   font-size: 1.7rem;
   z-index: 4;
 }
-
-#regle-du-jeu p {
+.regle-du-jeu__enonce {
+  font-size: 1.5rem;
   margin: 0px;
 }
-
-#regle-du-jeu:before {
+.regle-du-jeu ::before {
   content: "";
   position: absolute;
   left: -0.5rem;
@@ -38,8 +36,7 @@ main {
   border-top: 2px solid #e6e6e6;
   border-left: 2px solid #e6e6e6;
 }
-
-#regle-du-jeu::after {
+.regle-du-jeu ::after {
   content: "";
   position: absolute;
   right: 0.5rem;
@@ -51,8 +48,12 @@ main {
   border-right: 2px solid #e6e6e6;
 }
 
-.enonce {
-  font-size: 1.5rem;
+/* Positionnement de l'ensemble cartes + message personnalisé */
+#CartesEtMessages {
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  place-items: center;
+  grid-gap: 0.5rem;
 }
 
 .carte-a-retourner {
@@ -63,14 +64,6 @@ main {
   position: relative;
   border-top: 4px black;
   max-height: 30vh;
-}
-
-/* Positionnement de l'ensemble cartes + message personnalisé */
-#CartesEtMessages {
-  display: grid;
-  grid-template-columns: 20% 60% 20%;
-  place-items: center;
-  grid-gap: 0.5rem;
 }
 
 /* Positionnement des cartes */

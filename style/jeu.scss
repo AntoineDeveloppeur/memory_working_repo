@@ -9,45 +9,51 @@ main {
     width: 90vw;
     z-index: -3;
 }
-#regle-du-jeu {
+.regle-du-jeu {
     position: relative;
     max-width: 90%;
     margin-left: auto;
     margin-right: auto;
     z-index: 2;
     background: vars.$color-3;
+    &__titre {
+        font-size: 1.7rem;
+        z-index: 4;
+    }
+    &__enonce {
+        font-size: 1.5rem;
+        margin: 0px;
+    }
+    ::before {
+        content: '';
+        position: absolute;
+        left: -0.5rem;
+        top: -0.5rem;
+        height: 30%;
+        width: 10%;
+        z-index: 1;
+        border-top: 2px solid darken(vars.$color-main, 10);
+        border-left: 2px solid darken(vars.$color-main, 10);
+    }
+    ::after {
+        content: '';
+        position: absolute;
+        right: 0.5rem;
+        bottom: 0.5rem;
+        height: 30%;
+        width: 10%;
+        z-index: 1;
+        border-bottom: 2px solid darken(vars.$color-main, 10);
+        border-right: 2px solid darken(vars.$color-main, 10);
+    }
 }
-#regle-du-jeu h2 {
-    font-size: 1.7rem;
-    z-index: 4;
-}
-#regle-du-jeu p {
-    margin: 0px;
-}
-#regle-du-jeu:before {
-    content: '';
-    position: absolute;
-    left: -0.5rem;
-    top: -0.5rem;
-    height: 30%;
-    width: 10%;
-    z-index: 1;
-    border-top: 2px solid darken(vars.$color-main, 10);
-    border-left: 2px solid darken(vars.$color-main, 10);
-}
-#regle-du-jeu::after {
-    content: '';
-    position: absolute;
-    right: 0.5rem;
-    bottom: 0.5rem;
-    height: 30%;
-    width: 10%;
-    z-index: 1;
-    border-bottom: 2px solid darken(vars.$color-main, 10);
-    border-right: 2px solid darken(vars.$color-main, 10);
-}
-.enonce {
-    font-size: 1.5rem;
+
+/* Positionnement de l'ensemble cartes + message personnalisé */
+#CartesEtMessages {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    place-items: center;
+    grid-gap: 0.5rem;
 }
 .carte-a-retourner {
     position: relative;
@@ -56,13 +62,6 @@ main {
     position: relative;
     border-top: 4px black;
     max-height: 30vh;
-}
-/* Positionnement de l'ensemble cartes + message personnalisé */
-#CartesEtMessages {
-    display: grid;
-    grid-template-columns: 20% 60% 20%;
-    place-items: center;
-    grid-gap: 0.5rem;
 }
 /* Positionnement des cartes */
 .grid-cartes {
