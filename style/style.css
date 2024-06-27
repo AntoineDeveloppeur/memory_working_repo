@@ -19,13 +19,12 @@ body {
   align-items: center;
 }
 
-#logo-et-nom-du-jeu {
+.logo-et-nom-du-jeu {
   display: flex;
   justify-content: center;
   align-items: center;
 }
-
-.logo {
+.logo-et-nom-du-jeu__logo {
   height: 80px;
 }
 

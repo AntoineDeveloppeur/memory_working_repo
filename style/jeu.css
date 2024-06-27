@@ -1,5 +1,5 @@
 @charset "UTF-8";
-#encadre-du-jeu {
+main {
   background-color: rgb(127, 181, 91);
   border-radius: 2rem;
   padding: 1rem 0.5rem 3rem 0.5rem;
