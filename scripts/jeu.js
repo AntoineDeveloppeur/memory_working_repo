@@ -165,8 +165,10 @@ function delay(time) {
 }
 
 // TODO : prendre en compte le nombre de tentative Ratées pour faire un score élaboré
-function afficherLeNbDoublonsATrouver(score, nombreTentativesRatées) {
-    let messagePersonnalise = document.getElementById('LeNbDoublonsATrouver')
+function affichernbDoublonsATrouver(score, nombreTentativesRatées) {
+    let messagePersonnalise = document.querySelector(
+        '.cartesEtMessages__message--nbDoublonsATrouver'
+    )
     messagePersonnalise.innerText = `Il reste ${
         scoreMax - score
     } doublons à trouver`
@@ -213,9 +215,10 @@ function revelerCarte(event) {
         if (nbDeCarteFaceVisible > 1) {
             if (comparerDeuxCartes() === true) {
                 calculScore()
-                afficherLeNbDoublonsATrouver(score, nombreTentativesRatées)
-                let messageEncouragement =
-                    document.getElementById('Encouragement')
+                affichernbDoublonsATrouver(score, nombreTentativesRatées)
+                let messageEncouragement = document.querySelector(
+                    '.cartesEtMessages__message__encouragement'
+                )
                 messageEncouragement.innerHTML =
                     'Bravo ! un doublon découvert &#128522;'
                 listeCartesChoisies = []
@@ -223,9 +226,10 @@ function revelerCarte(event) {
                 // retourner les cartes face caché
             } else {
                 nombreTentativesRatées++
-                afficherLeNbDoublonsATrouver(score, nombreTentativesRatées)
-                let messageEncouragement =
-                    document.getElementById('Encouragement')
+                affichernbDoublonsATrouver(score, nombreTentativesRatées)
+                let messageEncouragement = document.querySelector(
+                    '.cartesEtMessages__message__encouragement'
+                )
                 messageEncouragement.innerText = `Dommage, essayez de mémoriser les photos derrières les cartes retournées`
                 nbDeCarteFaceVisible = 0
                 cacherLesCartes()
@@ -236,7 +240,7 @@ function revelerCarte(event) {
 
 export function lancerJeu() {
     // Lancer le jeu à condition d'être sur la page jeu
-    if (document.getElementById('CartesEtMessages')) {
+    if (document.querySelector('.cartesEtMessages')) {
         creerGrilleCartes()
         document.addEventListener('click', revelerCarte)
     }

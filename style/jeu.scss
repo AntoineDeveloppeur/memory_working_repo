@@ -48,12 +48,6 @@ main {
     }
 }
 
-#CartesEtMessages {
-    display: grid;
-    grid-template-columns: 20% 60% 20%;
-    place-items: center;
-    grid-gap: 0.5rem;
-}
 /* Positionnement des cartes */
 .grid-cartes {
     display: grid;
@@ -98,28 +92,38 @@ main {
 .photorevele {
     z-index: 1;
 }
-/* Trouver un moyen de remettre en forme la division #message */
-#message {
-    padding: 1rem;
-    background-color: white;
-    border-radius: 15px;
-    height: auto;
-    padding: 1rem 0.5rem 0.5rem 0.5rem;
+.cartesEtMessages {
+    display: grid;
+    grid-template-columns: 20% 60% 20%;
+    place-items: center;
+    grid-gap: 0.5rem;
+    &__message {
+        padding: 1rem;
+        background-color: white;
+        border-radius: 15px;
+        height: auto;
+        padding: 1rem 0.5rem 0.5rem 0.5rem;
+        &__encouragement,
+        &__nbDoublonsATrouver {
+            margin-left: auto;
+            margin-right: auto;
+            padding-bottom: 0.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: vars.$color-4;
+            font-size: 1.2rem;
+            text-align: center;
+        }
+    }
 }
-.MessagePersonnalise,
-#ColonneVide {
-    margin-left: auto;
-    margin-right: auto;
-    padding-bottom: 0.5rem;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-.MessagePersonnalise {
+
+.droite {
     color: vars.$color-4;
     font-size: 1.2rem;
     text-align: center;
 }
+
 .Carte1 {
     order: 1;
 }

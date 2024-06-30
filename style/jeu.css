@@ -48,13 +48,6 @@ main {
   border-right: 2px solid #e6e6e6;
 }
 
-#CartesEtMessages {
-  display: grid;
-  grid-template-columns: 20% 60% 20%;
-  place-items: center;
-  grid-gap: 0.5rem;
-}
-
 /* Positionnement des cartes */
 .grid-cartes {
   display: grid;
@@ -108,26 +101,32 @@ main {
   z-index: 1;
 }
 
-/* Trouver un moyen de remettre en forme la division #message */
-#message {
+.cartesEtMessages {
+  display: grid;
+  grid-template-columns: 20% 60% 20%;
+  place-items: center;
+  grid-gap: 0.5rem;
+}
+.cartesEtMessages__message {
   padding: 1rem;
   background-color: white;
   border-radius: 15px;
   height: auto;
   padding: 1rem 0.5rem 0.5rem 0.5rem;
 }
-
-.MessagePersonnalise,
-#ColonneVide {
+.cartesEtMessages__message__encouragement, .cartesEtMessages__message__nbDoublonsATrouver {
   margin-left: auto;
   margin-right: auto;
   padding-bottom: 0.5rem;
   display: flex;
   align-items: center;
   justify-content: center;
+  color: rgb(95, 157, 55);
+  font-size: 1.2rem;
+  text-align: center;
 }
 
-.MessagePersonnalise {
+.droite {
   color: rgb(95, 157, 55);
   font-size: 1.2rem;
   text-align: center;
