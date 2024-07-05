@@ -59,7 +59,7 @@ async function creerGrilleCartes() {
     await recupererDonneesCartes()
     let ChoixTypeDeCartes = recupererChoixTypeDeCartes()
     // Assigner a une variable de la division dans laquelle les cartes vont être ajoutée
-    const gridCartes = document.querySelector('.grid-cartes')
+    const gridCartes = document.querySelector('.cartesEtMessages__grid-cartes')
     // Vider la divisions qui contient les cartes
     gridCartes.innerHTML = ''
     // Créer des doublons à partir du type de carte
@@ -154,9 +154,9 @@ function placerLesCartesAleatoirement(nombreDeDoublons) {
 // Retourne les cartes face cachés lorsque les cartes révélés ne sont pas identiques
 async function cacherLesCartes() {
     await delay(3000)
-    let [Carte1, Carte2] = listeCartesChoisies
-    Carte1.classList.remove('photorevele')
-    Carte2.classList.remove('photorevele')
+    let [carte1, carte2] = listeCartesChoisies
+    carte1.classList.remove('photorevele')
+    carte2.classList.remove('photorevele')
     listeCartesChoisies = []
 }
 // fonction nécessaire pour créer un délai
@@ -167,7 +167,7 @@ function delay(time) {
 // TODO : prendre en compte le nombre de tentative Ratées pour faire un score élaboré
 function affichernbDoublonsATrouver(score, nombreTentativesRatées) {
     let messagePersonnalise = document.querySelector(
-        '.cartesEtMessages__message--nbDoublonsATrouver'
+        '.cartesEtMessages__message__nbDoublonsATrouver'
     )
     messagePersonnalise.innerText = `Il reste ${
         scoreMax - score
@@ -187,8 +187,8 @@ function calculScore() {
  * @return {boolean}
  */
 function comparerDeuxCartes() {
-    let [Carte1, Carte2] = listeCartesChoisies
-    if (Carte1.src === Carte2.src) {
+    let [carte1, carte2] = listeCartesChoisies
+    if (carte1.src === carte2.src) {
         return true
     } else {
         return false

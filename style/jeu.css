@@ -14,6 +14,7 @@ main {
   max-width: 90%;
   margin-left: auto;
   margin-right: auto;
+  margin-bottom: 20px;
   z-index: 2;
   background: rgb(127, 181, 91);
 }
@@ -24,32 +25,33 @@ main {
 .regle-du-jeu__enonce {
   font-size: 1.5rem;
   margin: 0px;
+  padding: 0;
 }
 .regle-du-jeu ::before {
   content: "";
   position: absolute;
-  left: -0.5rem;
+  right: -0.5rem;
   top: -0.5rem;
-  height: 30%;
-  width: 10%;
+  height: 50%;
+  width: 30%;
   z-index: 1;
   border-top: 2px solid #e6e6e6;
-  border-left: 2px solid #e6e6e6;
+  border-right: 2px solid #e6e6e6;
 }
 .regle-du-jeu ::after {
   content: "";
   position: absolute;
-  right: 0.5rem;
-  bottom: 0.5rem;
-  height: 30%;
-  width: 10%;
+  left: -0.5rem;
+  bottom: -0.5rem;
+  height: 50%;
+  width: 30%;
   z-index: 1;
   border-bottom: 2px solid #e6e6e6;
-  border-right: 2px solid #e6e6e6;
+  border-left: 2px solid #e6e6e6;
 }
 
 /* Positionnement des cartes */
-.grid-cartes {
+.cartesEtMessages__grid-cartes {
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   grid-gap: 1rem;
@@ -68,7 +70,7 @@ main {
 
 /* Positionnement de l'ensemble cartes + message personnalisé */
 /* Permet d'afficher toute la photo en respectant son ratio d'orgine */
-.grid-cartes,
+.cartesEtMessages__grid-cartes,
 .photo,
 .dos-de-carte,
 .carte-carroussel {
@@ -132,26 +134,26 @@ main {
   text-align: center;
 }
 
-.Carte1 {
+.emplacement-carte1 {
   order: 1;
 }
 
-.Carte2 {
+.emplacement-carte2 {
   order: 2;
 }
 
-.Carte3 {
+.emplacement-emplacement-carte3 {
   order: 3;
 }
 
-.Carte4 {
+.emplacement-carte4 {
   order: 4;
 }
 
-.Carte5 {
+.emplacement-carte5 {
   order: 5;
 }
 
-.Carte6 {
+.emplacement-carte6 {
   order: 6;
 }/*# sourceMappingURL=jeu.css.map */
