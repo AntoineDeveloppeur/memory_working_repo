@@ -50,10 +50,14 @@
 }
 /* fin du copier coller design des bouttons*/
 
+.boutton {
+    font-size: 2rem;
+}
+
 .zoneCentrale {
     background-color: vars.$color-3;
     border-radius: 3em;
-    box-shadow: 0 0 14px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
     position: absolute;
     top: 50%;
     left: 50%;
@@ -66,7 +70,7 @@
     /* Position des cartes dans la zone */
     display: grid;
     justify-content: center;
-    gap: 0.3rem;
+    gap: 0.5rem;
 }
 .grid1 {
     grid-row: 1/8;
@@ -109,7 +113,7 @@
 }
 #popUpOption h2 {
     font-size: 2rem;
-    margin: 10px;
+    margin: 1rem;
 }
 #carroussel {
     display: flex;
@@ -131,13 +135,13 @@
     align-items: center;
     /* La valeur de width correspond à la largeur des images des cartes */
     width: 286px;
-    gap: 50px;
+    gap: 3rem;
 }
 
 /* Bouttons de défilements du carroussel animés */
 .fleche {
-    width: 50px;
-    margin: 20px;
+    width: 3rem;
+    margin: 1rem;
     z-index: 2;
     opacity: 0.5;
     transition: opacity 0.5s ease;
@@ -157,7 +161,7 @@
     transition: opacity 0.5s ease;
 }
 #container button {
-    margin: 10px;
+    margin: 1rem;
 }
 .etoile {
     height: 100%;
