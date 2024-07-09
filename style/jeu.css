@@ -1,7 +1,8 @@
 @charset "UTF-8";
 main {
   background-color: rgb(127, 181, 91);
-  border-radius: 2rem;
+  border-radius: 3em;
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
   padding: 1rem 1rem 1rem 1rem;
   margin: 1rem;
   height: auto;
@@ -133,6 +134,7 @@ h1 strong {
 .droite {
   color: rgb(95, 157, 55);
   text-align: center;
+  margin-right: 1rem;
 }
 
 .emplacement-carte1 {
