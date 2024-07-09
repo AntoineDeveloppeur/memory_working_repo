@@ -1,15 +1,5 @@
 [
     {
-        "id": 1,
-        "nom": "les piques",
-        "difficulte": 2,
-        "nombreDeDoublons": 4,
-        "image1": "images/7pique.jpg",
-        "image2": "images/8pique.jpg",
-        "image3": "images/9pique.jpg",
-        "image4": "images/10pique.jpg"
-    },
-    {
         "id": 2,
         "nom": "les Bruno",
         "difficulte": 1,
@@ -28,4 +18,3 @@
         "image3": "images/raphael.jpg"
     }
 ]
-    

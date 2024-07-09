@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* début de copier coller design bouttons */
 .boutton,
-#popUpOption h1 {
+.popUpBackground__options h1 {
   width: 20rem;
   color: white;
   border: solid rgba(0, 0, 0, 0);
@@ -59,7 +59,13 @@
   justify-content: center;
 }
 
-#popUpOption {
+.popUpBackground {
+  display: none;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(255, 255, 255, 0.5);
+}
+.popUpBackground__options {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -76,47 +82,41 @@
   justify-content: space-around;
   align-items: center;
 }
-
-.popUpBackground {
-  display: none;
-  height: 100vh;
-  width: 100vw;
-  background-color: rgba(255, 255, 255, 0.5);
-}
-
-.active {
-  display: flex !important;
-}
-
-#popUpOption h2 {
-  font-size: 2rem;
+.popUpBackground__options h2 {
   margin: 1rem;
 }
-
-#carroussel {
+.popUpBackground__options__carroussel {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-
-#container {
+.popUpBackground__options__carroussel__container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   align-items: center;
   overflow: hidden;
 }
-
-#container img {
-  height: 100%;
-}
-
-#liste-carte-carroussel {
+.popUpBackground__options__carroussel__container__liste-cartes {
   display: flex;
   align-items: center;
   /* La valeur de width correspond à la largeur des images des cartes */
   width: 286px;
+  max-height: 300px;
   gap: 3rem;
+}
+.popUpBackground__options__carroussel__container__liste-cartes__carte {
+  -o-object-fit: cover;
+     object-fit: cover;
+  flex-shrink: 0;
+  flex-grow: 0;
+}
+.popUpBackground__options__carroussel__container button {
+  margin: 1rem;
+}
+
+.active {
+  display: flex !important;
 }
 
 /* Bouttons de défilements du carroussel animés */
@@ -128,12 +128,12 @@
   transition: opacity 0.5s ease;
 }
 
-#gauche {
+.fleche--gauche {
   transform: rotate(180deg);
   visibility: hidden;
 }
 
-#gauche:hover {
+.fleche--gauche:hover {
   transform: rotate(180deg) scale(1.1);
   opacity: 1;
   transition: opacity 0.5s ease;
@@ -143,10 +143,6 @@
   transform: scale(1.1);
   opacity: 1;
   transition: opacity 0.5s ease;
-}
-
-#container button {
-  margin: 1rem;
 }
 
 .etoile {
