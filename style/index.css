@@ -3,32 +3,28 @@
 .boutton,
 #popUpOption h1 {
   width: 20rem;
-  --c: vars.$color-4; /* the color */
-  --b: 0.1em; /* border length*/
-  --d: 10px; /* the cube depth */
-  --_s: calc(var(--d) + var(--b));
   color: white;
   border: solid rgba(0, 0, 0, 0);
-  border-width: var(--b) var(--b) var(--_s) var(--_s);
-  background: conic-gradient(at left var(--d) bottom var(--d), rgba(0, 0, 0, 0) 90deg, rgba(255, 255, 255, 0.3) 0 225deg, rgba(255, 255, 255, 0.6) 0) border-box, conic-gradient(at left var(--_s) bottom var(--_s), rgba(0, 0, 0, 0) 90deg, var(--c) 0) 0 100%/calc(100% - var(--b)) calc(100% - var(--b)) border-box;
-  transform: translate(calc(var(--d) / -1), var(--d));
-  -webkit-clip-path: polygon(var(--d) 0%, var(--d) 0%, 100% 0%, 100% calc(100% - var(--d)), 100% calc(100% - var(--d)), var(--d) calc(100% - var(--d)));
-          clip-path: polygon(var(--d) 0%, var(--d) 0%, 100% 0%, 100% calc(100% - var(--d)), 100% calc(100% - var(--d)), var(--d) calc(100% - var(--d)));
+  border-width: 0.1rem 0.8rem 0.8rem;
+  background: conic-gradient(at left 0.7rem bottom 0.7rem, rgba(0, 0, 0, 0) 90deg, rgba(255, 255, 255, 0.3) 0 225deg, rgba(255, 255, 255, 0.6) 0) border-box, conic-gradient(at left 0.8rem bottom 0.8rem, rgba(0, 0, 0, 0) 90deg, rgb(95, 157, 55) 0) 0 100%/calc(100% - 0.1rem) calc(100% - 0.1rem) border-box;
+  transform: translate(-0.7rem, 0.7rem);
+  -webkit-clip-path: polygon(0.7rem 0%, 0.7rem 0%, 100% 0%, 100% calc(100% - 0.7rem), 100% calc(100% - 0.7rem), 0.7rem calc(100% - 0.7rem));
+          clip-path: polygon(0.7rem 0%, 0.7rem 0%, 100% 0%, 100% calc(100% - 0.7rem), 100% calc(100% - 0.7rem), 0.7rem calc(100% - 0.7rem));
   transition: 0.5s;
 }
 
 .boutton:hover {
   transform: translate(0, 0);
-  -webkit-clip-path: polygon(0% var(--d), var(--d) 0%, 100% 0%, 100% calc(100% - var(--d)), calc(100% - var(--d)) 100%, 0% 100%);
-          clip-path: polygon(0% var(--d), var(--d) 0%, 100% 0%, 100% calc(100% - var(--d)), calc(100% - var(--d)) 100%, 0% 100%);
+  -webkit-clip-path: polygon(0% 0.7rem, 0.7rem 0%, 100% 0%, 100% calc(100% - 0.7rem), calc(100% - 0.7rem) 100%, 0% 100%);
+          clip-path: polygon(0% 0.7rem, 0.7rem 0%, 100% 0%, 100% calc(100% - 0.7rem), calc(100% - 0.7rem) 100%, 0% 100%);
 }
 
 /* fin du copier coller design des bouttons*/
 .boutton {
-  font-size: 2rem;
+  font-size: 1.5rem;
 }
 
-.zoneCentrale {
+.zone-Centrale {
   background-color: rgb(127, 181, 91);
   border-radius: 3em;
   box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
@@ -36,8 +32,8 @@
   top: 50%;
   left: 50%;
   translate: -50% -50%;
-  width: 50vw;
-  height: 40vh;
+  min-width: 440px;
+  height: auto;
   min-height: 15rem;
   max-width: 500px;
   padding: 1.5rem;

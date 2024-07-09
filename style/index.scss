@@ -4,57 +4,54 @@
 .boutton,
 #popUpOption h1 {
     width: 20rem;
-    --c: vars.$color-4; /* the color */
-    --b: 0.1em; /* border length*/
-    --d: 10px; /* the cube depth */
-
-    --_s: calc(var(--d) + var(--b));
 
     color: vars.$color-main;
     border: solid #0000;
-    border-width: var(--b) var(--b) var(--_s) var(--_s);
+    border-width: vars.$border-length vars.$cube-calculation
+        vars.$cube-calculation;
     background: conic-gradient(
-                at left var(--d) bottom var(--d),
+                at left vars.$cube-depth bottom vars.$cube-depth,
                 #0000 90deg,
-                rgb(255 255 255 /0.3) 0 225deg,
-                rgb(255 255 255 /0.6) 0
+                rgba(255, 255, 255, 0.3) 0 225deg,
+                rgba(255, 255, 255, 0.6) 0
             )
             border-box,
         conic-gradient(
-                at left var(--_s) bottom var(--_s),
+                at left vars.$cube-calculation bottom vars.$cube-calculation,
                 #0000 90deg,
-                var(--c) 0
+                vars.$color-4 0
             )
-            0 100% / calc(100% - var(--b)) calc(100% - var(--b)) border-box;
-    transform: translate(calc(var(--d) / -1), var(--d));
+            0 100% / calc(100% - vars.$border-length)
+            calc(100% - vars.$border-length) border-box;
+    transform: translate(calc(vars.$cube-depth / -1), vars.$cube-depth);
     clip-path: polygon(
-        var(--d) 0%,
-        var(--d) 0%,
+        vars.$cube-depth 0%,
+        vars.$cube-depth 0%,
         100% 0%,
-        100% calc(100% - var(--d)),
-        100% calc(100% - var(--d)),
-        var(--d) calc(100% - var(--d))
+        100% calc(100% - vars.$cube-depth),
+        100% calc(100% - vars.$cube-depth),
+        vars.$cube-depth calc(100% - vars.$cube-depth)
     );
     transition: 0.5s;
 }
 .boutton:hover {
     transform: translate(0, 0);
     clip-path: polygon(
-        0% var(--d),
-        var(--d) 0%,
+        0% vars.$cube-depth,
+        vars.$cube-depth 0%,
         100% 0%,
-        100% calc(100% - var(--d)),
-        calc(100% - var(--d)) 100%,
+        100% calc(100% - vars.$cube-depth),
+        calc(100% - vars.$cube-depth) 100%,
         0% 100%
     );
 }
 /* fin du copier coller design des bouttons*/
 
 .boutton {
-    font-size: 2rem;
+    font-size: 1.5rem;
 }
 
-.zoneCentrale {
+.zone-Centrale {
     background-color: vars.$color-3;
     border-radius: 3em;
     box-shadow: 0 0 1rem rgba(0, 0, 0, 0.3);
@@ -62,8 +59,8 @@
     top: 50%;
     left: 50%;
     translate: -50% -50%;
-    width: 50vw;
-    height: 40vh;
+    min-width: 440px;
+    height: auto;
     min-height: 15rem;
     max-width: 500px;
     padding: 1.5rem;
