@@ -67,7 +67,7 @@ h1 strong {
 .photo {
     position: relative;
     border-top: 4px black;
-    max-height: 30vh;
+    height: 30vh;
 }
 /* Positionnement de l'ensemble cartes + message personnalisé */
 /* Permet d'afficher toute la photo en respectant son ratio d'orgine */
@@ -146,4 +146,23 @@ h1 strong {
 }
 .emplacement-carte6 {
     order: 6;
+}
+
+@media (max-width: 1024px) {
+}
+
+@media (max-width: 767.98px) {
+    //La taille minimale prise en compte est 360px
+    main {
+        border-radius: 0;
+        box-shadow: 0 0 0;
+        width: 100vw;
+    }
+    .cartesEtMessages {
+        display: grid;
+        grid-template-columns: none;
+        grid-template-rows: auto;
+        place-items: center;
+        grid-gap: 1rem;
+    }
 }
