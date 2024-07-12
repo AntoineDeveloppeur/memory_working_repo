@@ -23,8 +23,8 @@ export function ouvrirLesOptions() {
     }
 }
 
-function creerContenuCarroussel() {
-    recupererDonneesCartes()
+async function creerContenuCarroussel() {
+    await recupererDonneesCartes()
     let listeCarteCarroussel = document.querySelector(
         '.popUpBackground__options__carroussel__container__liste-cartes'
     )
@@ -38,8 +38,8 @@ function creerContenuCarroussel() {
         listeCarteCarroussel.appendChild(imageChoix)
     }
 }
-function afficherDifficulté() {
-    recupererDonneesCartes()
+async function afficherDifficulté() {
+    await recupererDonneesCartes()
     let nombreEtoiles = document.querySelector(
         '.popUpBackground__options__carroussel__container__etoiles'
     )
@@ -61,8 +61,8 @@ function afficherDifficulté() {
         nombreEtoiles.appendChild(etoileVide)
     }
 }
-function afficherNomTypedeCartes() {
-    recupererDonneesCartes()
+async function afficherNomTypedeCartes() {
+    await recupererDonneesCartes()
     let container = document.querySelector(
         `.popUpBackground__options__carroussel__container > :first-child`
     )
@@ -115,8 +115,9 @@ function defilerLeCarroussel() {
     }
 }
 
-function afficherMasquerBouttons() {
-    recupererDonneesCartes()
+async function afficherMasquerBouttons() {
+    await recupererDonneesCartes()
+
     const flecheDroite = document.querySelector('.fleche--droite')
     if (p == listeTypeDeCarte.length - 1) {
         flecheDroite.style.visibility = 'hidden'
