@@ -83,7 +83,30 @@
   align-items: center;
 }
 .popUpBackground__options h2 {
+  position: relative;
   margin: 1rem;
+}
+.popUpBackground__options h2::before {
+  content: "";
+  position: absolute;
+  right: -1rem;
+  top: -1rem;
+  height: 70%;
+  width: 50%;
+  z-index: 3;
+  border-top: 2px solid #e6e6e6;
+  border-right: 2px solid #e6e6e6;
+}
+.popUpBackground__options h2::after {
+  content: "";
+  position: absolute;
+  left: -1rem;
+  bottom: -1rem;
+  height: 70%;
+  width: 50%;
+  z-index: 3;
+  border-bottom: 2px solid #e6e6e6;
+  border-left: 2px solid #e6e6e6;
 }
 .popUpBackground__options__carroussel {
   display: flex;
@@ -98,7 +121,12 @@
   overflow: hidden;
   height: auto;
 }
-.popUpBackground__options__carroussel__container p {
+.popUpBackground__options__carroussel__container__nom-cartes {
+  padding: 0;
+  font-size: 2rem;
+  font-weight: 600;
+}
+.popUpBackground__options__carroussel__container__difficulte {
   padding: 0;
   font-size: 1.5rem;
 }
@@ -167,6 +195,15 @@
     border-radius: 0;
     box-shadow: 0 0 0;
     min-width: 0;
+  }
+  .zone-Centrale h1 strong {
+    font-size: 3rem;
+  }
+  .zone-Centrale h1 {
+    font-size: 2.5rem;
+  }
+  .logo-et-nom-du-jeu__logo {
+    height: 10rem;
   }
   .popUpBackground__options {
     position: relative;
