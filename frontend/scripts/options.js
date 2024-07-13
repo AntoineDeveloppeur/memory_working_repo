@@ -8,6 +8,15 @@ import {
  **/
 let p = 0
 
+async function connectionAuServer() {
+    const bouttonServer = document.querySelector('.boutton-server')
+    bouttonServer.addEventListener('click', () => {
+        fetch('http://localhost:3000')
+            .then(console.log('connection réussie côté frontend'))
+            .catch((error) => console.log(error))
+    })
+}
+
 export function ouvrirLesOptions() {
     if (document.querySelector('.grid3')) {
         const bouttonOptions = document.querySelector('.grid3')
@@ -20,6 +29,7 @@ export function ouvrirLesOptions() {
         afficherDifficulté()
         defilerLeCarroussel()
         fermerLesOptions()
+        connectionAuServer()
     }
 }
 
