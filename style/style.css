@@ -117,8 +117,8 @@ body {
   position: relative;
   z-index: -1;
   background-color: rgb(127, 181, 91);
-  width: 100vw;
-  height: 100vh;
+  width: auto;
+  height: auto;
 }
 
 .logo-et-nom-du-jeu {
