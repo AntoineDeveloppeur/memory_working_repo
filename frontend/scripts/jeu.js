@@ -13,7 +13,7 @@ export let listeTypeDosDeCarte = ''
 export async function recupererDonneesCartes() {
     if (listeTypeDeCarte == '') {
         if (window.localStorage.getItem('carteJSON') == null) {
-            const reponse = await fetch('cartes.json')
+            const reponse = await fetch('../data/cartes.json')
             listeTypeDeCarte = await reponse.json()
             //  Transformation de la liste de Carte en format JSON
             const carteJSON = JSON.stringify(listeTypeDeCarte)
@@ -27,7 +27,7 @@ export async function recupererDonneesCartes() {
     }
     if (listeTypeDosDeCarte == '') {
         if (window.localStorage.getItem('dosDeCarteJSON') == null) {
-            const reponse = await fetch('doscartes.json')
+            const reponse = await fetch('../data/doscartes.json')
             listeTypeDosDeCarte = await reponse.json()
             //  Transformation de la liste de Carte en format JSON
             const dosDeCarteJSON = JSON.stringify(listeTypeDosDeCarte)

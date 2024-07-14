@@ -57,7 +57,7 @@ async function afficherDifficulté() {
     // nombreEtoiles.innerText = listeTypeDeCarte[p].difficulte
     for (let i = 0; i < listeTypeDeCarte[p].difficulte; i++) {
         const etoileJaune = document.createElement('img')
-        etoileJaune.src = 'images/star_1.svg'
+        etoileJaune.src = '../images/star_1.svg'
         etoileJaune.classList.add('etoile')
         etoileJaune.alt = 'etoile jaune de notation'
 
@@ -65,7 +65,7 @@ async function afficherDifficulté() {
     }
     while (nombreEtoiles.childElementCount < 5) {
         const etoileVide = document.createElement('img')
-        etoileVide.src = 'images/star_0.svg'
+        etoileVide.src = '../images/star_0.svg'
         etoileVide.classList.add('etoile')
         etoileVide.alt = 'etoile vide de notation'
         nombreEtoiles.appendChild(etoileVide)
