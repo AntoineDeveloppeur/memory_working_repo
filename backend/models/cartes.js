@@ -8,8 +8,7 @@ const cartesSchema = mongoose.Schema({
     difficulte: { type: Number, required: false },
     images: [
         {
-            imageId: { type: String, required: false },
-            link: { type: String, required: true },
+            lien: { type: String, required: true },
         },
     ],
     nbImages: { type: String, required: true },

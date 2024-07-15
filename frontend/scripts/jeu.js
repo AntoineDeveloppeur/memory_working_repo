@@ -12,7 +12,9 @@ export let listeTypeDosDeCarte = ''
 // Cette fonction récupère les données des carte dans le local storage ou dans le fichier JSON
 export async function recupererDonneesCartes() {
     if (listeTypeDeCarte == '') {
-        if (window.localStorage.getItem('carteJSON') == null) {
+        //Pour les besoins de développement, cette fonction va toujours récupérer les données dans la base de données et non dans le local storage
+        // if (window.localStorage.getItem('carteJSON') == null) {
+        if (true) {
             const reponse = await fetch('../data/cartes.json')
             listeTypeDeCarte = await reponse.json()
             //  Transformation de la liste de Carte en format JSON
@@ -26,7 +28,9 @@ export async function recupererDonneesCartes() {
         }
     }
     if (listeTypeDosDeCarte == '') {
-        if (window.localStorage.getItem('dosDeCarteJSON') == null) {
+        //Pour les besoins de développement, cette fonction va toujours récupérer les données dans la base de données et non dans le local storage
+        // if (window.localStorage.getItem('dosDeCarteJSON') == null) {
+        if (true) {
             const reponse = await fetch('../data/doscartes.json')
             listeTypeDosDeCarte = await reponse.json()
             //  Transformation de la liste de Carte en format JSON
@@ -75,7 +79,7 @@ async function creerGrilleCartes() {
         // Créer l'image de la carte et ajouter au DOM
         const cartePremierDoublon = document.createElement('img')
         cartePremierDoublon.src =
-            listeTypeDeCarte[ChoixTypeDeCartes]['image' + i]
+            listeTypeDeCarte[ChoixTypeDeCartes].images[i - 1].lien
         cartePremierDoublon.classList.add('photo')
         cartePremierDoublon.id = 'photo-' + i
         premierDoublon.appendChild(cartePremierDoublon)
@@ -104,7 +108,7 @@ async function creerGrilleCartes() {
 
         const cartedeuxiemeDoublon = document.createElement('img')
         cartedeuxiemeDoublon.src =
-            listeTypeDeCarte[ChoixTypeDeCartes]['image' + i]
+            listeTypeDeCarte[ChoixTypeDeCartes].images[i - 1].lien
         cartedeuxiemeDoublon.classList.add('photo')
         cartedeuxiemeDoublon.id = 'photo-' + [i + nombreDeDoublons]
         deuxiemeDoublon.appendChild(cartedeuxiemeDoublon)

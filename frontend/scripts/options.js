@@ -41,7 +41,7 @@ async function creerContenuCarroussel() {
     listeCarteCarroussel.innerHTML = ''
     for (let i = 0; i < listeTypeDeCarte.length; i++) {
         const imageChoix = document.createElement('img')
-        imageChoix.src = listeTypeDeCarte[i].image1
+        imageChoix.src = listeTypeDeCarte[i].images[1].lien
         imageChoix.classList.add(
             'popUpBackground__options__carroussel__container__liste-cartes__carte'
         )
