@@ -1,5 +1,6 @@
 const express = require('express')
 const mongoose = require('mongoose')
+const routerCartes = require('/routes/Cartes')
 
 const app = express()
 
@@ -31,3 +32,5 @@ app.use((req, res, next) => {
     console.log('utilisation du server')
     res.status(200).json({ message: 'connection réussie' })
 })
+
+app.use('/cartes', routerCartes)
