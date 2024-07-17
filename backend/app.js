@@ -1,6 +1,6 @@
 const express = require('express')
 const mongoose = require('mongoose')
-const routerCartes = require('/routes/Cartes')
+const routerCartes = require('./routes/Cartes')
 
 const app = express()
 
