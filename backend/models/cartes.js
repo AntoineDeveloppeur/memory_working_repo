@@ -6,14 +6,10 @@ const cartesSchema = mongoose.Schema({
     id: { type: Number, required: false },
     nom: { type: String, require: true, unique: true },
     difficulte: { type: Number, required: false },
-    images: [
-        {
-            lien: { type: String, required: true },
-        },
-    ],
-    nbImages: { type: String, required: true },
+    images: [{ type: String, required: true }],
+    nbImages: { type: Number, required: true },
 })
 
-bookSchema.plugin(uniqueValidator)
+cartesSchema.plugin(uniqueValidator)
 
-module.exports = mongoose.Model('Cartes', cartesSchema)
+module.exports = mongoose.model('Cartes', cartesSchema)

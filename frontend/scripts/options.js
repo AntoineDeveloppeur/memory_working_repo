@@ -9,11 +9,24 @@ import {
 let p = 0
 
 async function connectionAuServer() {
-    const bouttonServer = document.querySelector('.boutton-server')
+    const bouttonServer = document.querySelector('.logo-et-nom-du-jeu')
     bouttonServer.addEventListener('click', () => {
         fetch('http://localhost:3000')
             .then(console.log('connection réussie côté frontend'))
             .catch((error) => console.log(error))
+    })
+}
+
+async function recupererToutesLesCartes() {
+    const bouttonServer = document.querySelector('.boutton-server')
+    bouttonServer.addEventListener('click', async () => {
+        try {
+            const response = await fetch('http://localhost:3000/api/cartes')
+            const Carte = await response.json()
+            console.log('Carte', Carte)
+        } catch (error) {
+            console.log('error', error)
+        }
     })
 }
 
@@ -30,6 +43,7 @@ export function ouvrirLesOptions() {
         defilerLeCarroussel()
         fermerLesOptions()
         connectionAuServer()
+        recupererToutesLesCartes()
     }
 }
 

@@ -15,13 +15,19 @@ export async function recupererDonneesCartes() {
         //Pour les besoins de développement, cette fonction va toujours récupérer les données dans la base de données et non dans le local storage
         // if (window.localStorage.getItem('carteJSON') == null) {
         if (true) {
-            const reponse = await fetch('../data/cartes.json')
-            listeTypeDeCarte = await reponse.json()
-            //  Transformation de la liste de Carte en format JSON
-            const carteJSON = JSON.stringify(listeTypeDeCarte)
-            // Stockage des informations dans le localStorage
-            window.localStorage.setItem('carteJSON', carteJSON)
-            // Sinon, chercher l'information dans le local storage
+            try {
+                const response = await fetch('http://localhost:3000/api/cartes')
+                listeTypeDeCarte = await response.json()
+            } catch (error) {
+                console.log('error', error)
+            }
+            // const reponse = await fetch('../data/cartes.json')
+            // listeTypeDeCarte = await reponse.json()
+            // //  Transformation de la liste de Carte en format JSON
+            // const carteJSON = JSON.stringify(listeTypeDeCarte)
+            // // Stockage des informations dans le localStorage
+            // window.localStorage.setItem('carteJSON', carteJSON)
+            // // Sinon, chercher l'information dans le local storage
         } else {
             const carteJSON = window.localStorage.getItem('carteJSON')
             listeTypeDeCarte = JSON.parse(carteJSON)
@@ -150,7 +156,7 @@ function placerLesCartesAleatoirement(nombreDeDoublons) {
         ordreDeChaquePhotos.removeAttribute('class')
         ordreDeChaquePhotos.classList.add(
             'carte-a-retourner',
-            'Carte' + listeDeChiffresUniques[n - 1]
+            'emplacement-carte' + listeDeChiffresUniques[n - 1]
         )
     }
 }
