@@ -85,7 +85,7 @@ async function creerGrilleCartes() {
         // Créer l'image de la carte et ajouter au DOM
         const cartePremierDoublon = document.createElement('img')
         cartePremierDoublon.src =
-            listeTypeDeCarte[ChoixTypeDeCartes].images[i - 1].lien
+            listeTypeDeCarte[ChoixTypeDeCartes].images[i - 1]
         cartePremierDoublon.classList.add('photo')
         cartePremierDoublon.id = 'photo-' + i
         premierDoublon.appendChild(cartePremierDoublon)
@@ -114,7 +114,7 @@ async function creerGrilleCartes() {
 
         const cartedeuxiemeDoublon = document.createElement('img')
         cartedeuxiemeDoublon.src =
-            listeTypeDeCarte[ChoixTypeDeCartes].images[i - 1].lien
+            listeTypeDeCarte[ChoixTypeDeCartes].images[i - 1]
         cartedeuxiemeDoublon.classList.add('photo')
         cartedeuxiemeDoublon.id = 'photo-' + [i + nombreDeDoublons]
         deuxiemeDoublon.appendChild(cartedeuxiemeDoublon)

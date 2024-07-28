@@ -17,33 +17,20 @@ async function connectionAuServer() {
     })
 }
 
-async function recupererToutesLesCartes() {
-    const bouttonServer = document.querySelector('.boutton-server')
-    bouttonServer.addEventListener('click', async () => {
-        try {
-            const response = await fetch('http://localhost:3000/api/cartes')
-            const Carte = await response.json()
-            console.log('Carte', Carte)
-        } catch (error) {
-            console.log('error', error)
-        }
-    })
-}
-
-export function ouvrirLesOptions() {
+export async function ouvrirLesOptions() {
     if (document.querySelector('.grid3')) {
         const bouttonOptions = document.querySelector('.grid3')
         const popUpBackground = document.querySelector('.popUpBackground')
         bouttonOptions.onclick = () => {
             popUpBackground.classList.add('active')
         }
+        await recupererDonneesCartes()
         afficherNomTypedeCartes()
         creerContenuCarroussel()
         afficherDifficulté()
         defilerLeCarroussel()
         fermerLesOptions()
         connectionAuServer()
-        recupererToutesLesCartes()
     }
 }
 
@@ -55,7 +42,7 @@ async function creerContenuCarroussel() {
     listeCarteCarroussel.innerHTML = ''
     for (let i = 0; i < listeTypeDeCarte.length; i++) {
         const imageChoix = document.createElement('img')
-        imageChoix.src = listeTypeDeCarte[i].images[1].lien
+        imageChoix.src = listeTypeDeCarte[i].images[1]
         imageChoix.classList.add(
             'popUpBackground__options__carroussel__container__liste-cartes__carte'
         )
