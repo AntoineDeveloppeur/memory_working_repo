@@ -103,8 +103,8 @@
                     />
                 </div>
             </div>
-            <!-- PopUp de connexion -->
         </div>
+        <!-- PopUp de connexion -->
         <div class="popUpBackgroundConnexion popUpBackground">
             <div class="popUpBackgroundConnexion__connexion">
                 <h1>Connexion</h1>
@@ -128,11 +128,56 @@
                     </div>
                     <button
                         type="submit"
-                        class="boutton boutton--petit popUpBackgroundConnexion__connexion__boutton"
+                        class="boutton boutton--petit popUpBackgroundConnexion__connexion__loginForm__boutton"
                     >
                         Se connecter
                     </button>
                 </form>
+                <button
+                    class="popUpBackgroundConnexion__connexion__boutton--modaleInscription"
+                >
+                    <strong>Pas encore membre ?</strong> <br />
+                    Inscrivez-vous gratuitement pour personnaliser vos cartes
+                    &#128516;
+                </button>
+            </div>
+        </div>
+        <!-- PopUp d'inscription -->
+        <div class="popUpBackgroundInscription popUpBackground">
+            <div class="popUpBackgroundInscription__inscription">
+                <h1>Inscription</h1>
+                <form
+                    class="popUpBackgroundInscription__inscription__signUpForm"
+                >
+                    <div
+                        class="popUpBackgroundInscription__inscription__signUpForm__email"
+                    >
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required />
+                    </div>
+                    <div
+                        class="popUpBackgroundInscription__inscription__signUpForm__password"
+                    >
+                        <label for="password">Choisir son mot de passe:</label>
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            required
+                        />
+                    </div>
+                    <button
+                        type="submit"
+                        class="boutton boutton--petit popUpBackgroundInscription__inscription__signUpForm__boutton"
+                    >
+                        S'inscrire
+                    </button>
+                </form>
+                <button
+                    class="popUpBackgroundInscription__inscription__boutton--modaleConnexion"
+                >
+                    <strong>Déja membre ?</strong>
+                </button>
             </div>
         </div>
     </body>

@@ -88,6 +88,7 @@ function fermerLesOptions() {
     )
     popUpBackgroundOption.onclick = (event) => {
         if (event.target === popUpBackgroundOption) {
+            console.log("j'appuie sur la popUpBackgroundOption")
             popUpBackgroundOption.classList.remove('active')
         }
     }
