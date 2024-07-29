@@ -80,7 +80,7 @@ h1 strong {
 .cartesEtMessages__grid-cartes,
 .photo,
 .dos-de-carte,
-.popUpBackground__options__carroussel__container__liste-cartes__carte {
+.popUpBackgroundOption__options__carroussel__container__liste-cartes__carte {
   width: 100%;
   height: 100%;
   -o-object-fit: cover;

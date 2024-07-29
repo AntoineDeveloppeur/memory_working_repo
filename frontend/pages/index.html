@@ -17,7 +17,7 @@
 
         <main>
             <div class="zone-Centrale">
-                <div class="logo-et-nom-du-jeu grid1">
+                <div class="logo-et-nom-du-jeu">
                     <img
                         src="../images/logo.png"
                         class="logo-et-nom-du-jeu__logo"
@@ -31,72 +31,68 @@
                         class="logo-et-nom-du-jeu__logo"
                     />
                 </div>
-                <div class="grid2">
-                    <button
-                        class="boutton"
-                        onclick="window.location.href = 'jeu.html';"
-                    >
-                        Jouer
-                    </button>
-                </div>
-                <div class="grid3">
-                    <button class="boutton">Options</button>
-                </div>
-                <div class="grid3">
-                    <button class="boutton boutton-server">Test server</button>
-                </div>
+                <button
+                    class="boutton"
+                    onclick="window.location.href = 'jeu.html';"
+                >
+                    Jouer
+                </button>
+                <button class="boutton boutton--options">Options</button>
+                <button class="boutton boutton--connexion grid3">
+                    Connexion
+                </button>
             </div>
         </main>
-        <!-- PopUp d'option -->
-        <div class="popUpBackground">
-            <div class="popUpBackground__options">
+        <div class="popUpBackgroundOption popUpBackground">
+            <!-- PopUp d'option -->
+            <div class="popUpBackgroundOption__options">
                 <h1>Options</h1>
                 <h2>Choix des cartes</h2>
-                <div class="popUpBackground__options__carroussel">
+                <div class="popUpBackgroundOption__options__carroussel">
                     <img
                         src="../images/fleche.png"
                         class="fleche fleche--gauche"
                     />
                     <div
-                        class="popUpBackground__options__carroussel__container"
+                        class="popUpBackgroundOption__options__carroussel__container"
                     >
                         <p
-                            class="popUpBackground__options__carroussel__container__nom-cartes"
+                            class="popUpBackgroundOption__options__carroussel__container__nom-cartes"
                         >
                             Les piques
                         </p>
                         <div
-                            class="popUpBackground__options__carroussel__container__liste-cartes"
+                            class="popUpBackgroundOption__options__carroussel__container__liste-cartes"
                         >
                             <img
                                 src="../images/7pique.jpg"
-                                class="popUpBackground__options__carroussel__container__liste-cartes__carte"
+                                class="popUpBackgroundOption__options__carroussel__container__liste-cartes__carte"
                             />
                             <img
                                 src="../images/8pique.jpg"
-                                class="popUpBackground__options__carroussel__container__liste-cartes__carte"
+                                class="popUpBackgroundOption__options__carroussel__container__liste-cartes__carte"
                             />
                             <img
                                 src="../images/9pique.jpg"
-                                class="popUpBackground__options__carroussel__container__liste-cartes__carte"
+                                class="popUpBackgroundOption__options__carroussel__container__liste-cartes__carte"
                             />
                             <img
                                 src="../images/10pique.jpg"
-                                class="popUpBackground__options__carroussel__container__liste-cartes__carte"
+                                class="popUpBackgroundOption__options__carroussel__container__liste-cartes__carte"
                             />
                         </div>
                         <p
-                            class="popUpBackground__options__carroussel__container__difficulte"
+                            class="popUpBackgroundOption__options__carroussel__container__difficulte"
                         >
                             Difficulté
                         </p>
                         <div
-                            class="popUpBackground__options__carroussel__container__etoiles"
+                            class="popUpBackgroundOption__options__carroussel__container__etoiles"
                         >
                             Nb d'étoile
                         </div>
                         <button
-                            class="boutton popUpBackground__options__carroussel__container__valider"
+                            class="boutton popUpBackgroundOption__options__carroussel__container__valider"
                         >
                             Valider
                         </button>
@@ -106,6 +102,37 @@
                         class="fleche fleche--droite"
                     />
                 </div>
+            </div>
+            <!-- PopUp de connexion -->
+        </div>
+        <div class="popUpBackgroundConnexion popUpBackground">
+            <div class="popUpBackgroundConnexion__connexion">
+                <h1>Connexion</h1>
+                <form class="popUpBackgroundConnexion__connexion__loginForm">
+                    <div
+                        class="popUpBackgroundConnexion__connexion__loginForm__email"
+                    >
+                        <label for="email">Email:</label>
+                        <input type="email" id="email" name="email" required />
+                    </div>
+                    <div
+                        class="popUpBackgroundConnexion__connexion__loginForm__password"
+                    >
+                        <label for="password">Mot de passe:</label>
+                        <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            required
+                        />
+                    </div>
+                    <button
+                        type="submit"
+                        class="boutton boutton--petit popUpBackgroundConnexion__connexion__boutton"
+                    >
+                        Se connecter
+                    </button>
+                </form>
             </div>
         </div>
     </body>

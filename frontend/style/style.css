@@ -149,6 +149,9 @@ h1 {
   text-decoration: none;
   font-size: 2rem;
 }
+.boutton--petit {
+  font-size: 1.5rem;
+}
 
 @media (max-width: 767.98px) {
   html {

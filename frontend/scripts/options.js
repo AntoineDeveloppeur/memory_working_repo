@@ -18,11 +18,13 @@ async function connectionAuServer() {
 }
 
 export async function ouvrirLesOptions() {
-    if (document.querySelector('.grid3')) {
-        const bouttonOptions = document.querySelector('.grid3')
-        const popUpBackground = document.querySelector('.popUpBackground')
+    if (document.querySelector('.popUpBackgroundOption')) {
+        const bouttonOptions = document.querySelector('.boutton--options')
+        const popUpBackgroundOption = document.querySelector(
+            '.popUpBackgroundOption'
+        )
         bouttonOptions.onclick = () => {
-            popUpBackground.classList.add('active')
+            popUpBackgroundOption.classList.add('active')
         }
         await recupererDonneesCartes()
         afficherNomTypedeCartes()
@@ -37,14 +39,14 @@ export async function ouvrirLesOptions() {
 async function creerContenuCarroussel() {
     await recupererDonneesCartes()
     let listeCarteCarroussel = document.querySelector(
-        '.popUpBackground__options__carroussel__container__liste-cartes'
+        '.popUpBackgroundOption__options__carroussel__container__liste-cartes'
     )
     listeCarteCarroussel.innerHTML = ''
     for (let i = 0; i < listeTypeDeCarte.length; i++) {
         const imageChoix = document.createElement('img')
         imageChoix.src = listeTypeDeCarte[i].images[1]
         imageChoix.classList.add(
-            'popUpBackground__options__carroussel__container__liste-cartes__carte'
+            'popUpBackgroundOption__options__carroussel__container__liste-cartes__carte'
         )
         listeCarteCarroussel.appendChild(imageChoix)
     }
@@ -52,7 +54,7 @@ async function creerContenuCarroussel() {
 async function afficherDifficulté() {
     await recupererDonneesCartes()
     let nombreEtoiles = document.querySelector(
-        '.popUpBackground__options__carroussel__container__etoiles'
+        '.popUpBackgroundOption__options__carroussel__container__etoiles'
     )
     nombreEtoiles.innerHTML = ''
     // nombreEtoiles.innerText = listeTypeDeCarte[p].difficulte
@@ -75,29 +77,32 @@ async function afficherDifficulté() {
 async function afficherNomTypedeCartes() {
     await recupererDonneesCartes()
     let container = document.querySelector(
-        `.popUpBackground__options__carroussel__container > :first-child`
+        `.popUpBackgroundOption__options__carroussel__container > :first-child`
     )
     container.innerHTML = listeTypeDeCarte[p].nom
 }
 
 function fermerLesOptions() {
-    const popUpBackground = document.querySelector('.popUpBackground')
-    popUpBackground.onclick = (event) => {
-        if (event.target === popUpBackground) {
-            popUpBackground.classList.remove('active')
+    const popUpBackgroundOption = document.querySelector(
+        '.popUpBackgroundOption'
+    )
+    popUpBackgroundOption.onclick = (event) => {
+        if (event.target === popUpBackgroundOption) {
+            popUpBackgroundOption.classList.remove('active')
         }
     }
     const valider = document.querySelector(
-        '.popUpBackground__options__carroussel__container__valider'
+        '.popUpBackgroundOption__options__carroussel__container__valider'
     )
     valider.onclick = (event) => {
-        popUpBackground.classList.remove('active')
+        popUpBackgroundOption.classList.remove('active')
         validerChoixTypeDeCartes()
     }
 }
+
 function defilerLeCarroussel() {
     const listeCarteCarroussel = document.querySelector(
-        '.popUpBackground__options__carroussel__container__liste-cartes'
+        '.popUpBackgroundOption__options__carroussel__container__liste-cartes'
     )
     listeCarteCarroussel.style.transition = 'all 0.5s ease'
     const flecheGauche = document.querySelector('.fleche--gauche')

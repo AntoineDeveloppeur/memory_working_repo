@@ -1,7 +1,7 @@
 @charset "UTF-8";
 /* début de copier coller design bouttons */
 .boutton,
-.popUpBackground__options h1 {
+.popUpBackgroundOption__options h1 {
   width: 15rem;
   color: white;
   border: solid rgba(0, 0, 0, 0);
@@ -38,25 +38,11 @@
   max-width: 500px;
   padding: 1.5rem;
   /* Position des cartes dans la zone */
-  display: grid;
-  justify-content: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
   gap: 0.5rem;
-}
-
-.grid1 {
-  grid-row: 1/8;
-}
-
-.grid2 {
-  grid-row: 8/9;
-  display: flex;
-  justify-content: center;
-}
-
-.grid3 {
-  grid-row: 9/10;
-  display: flex;
-  justify-content: center;
 }
 
 .popUpBackground {
@@ -65,7 +51,8 @@
   width: 100vw;
   background-color: rgba(255, 255, 255, 0.5);
 }
-.popUpBackground__options {
+
+.popUpBackgroundConnexion__connexion {
   position: absolute;
   top: 50%;
   left: 50%;
@@ -82,11 +69,47 @@
   justify-content: flex-start;
   align-items: center;
 }
-.popUpBackground__options h2 {
+.popUpBackgroundConnexion__connexion__loginForm__email, .popUpBackgroundConnexion__connexion__loginForm__password {
+  display: flex;
+  flex-direction: column;
+}
+.popUpBackgroundConnexion__connexion__boutton {
+  margin-bottom: 30px;
+}
+
+input[type=email],
+input[type=password] {
+  width: auto;
+  padding: 8px;
+  margin-bottom: 10px;
+  margin-right: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.popUpBackgroundOption__options {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  height: auto;
+  width: 60vw;
+  max-width: 550px;
+  max-height: 900px;
+  background-color: rgb(127, 181, 91);
+  border-radius: 3em;
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+.popUpBackgroundOption__options h2 {
   position: relative;
   margin: 1rem;
 }
-.popUpBackground__options h2::before {
+.popUpBackgroundOption__options h2::before {
   content: "";
   position: absolute;
   right: -1rem;
@@ -97,7 +120,7 @@
   border-top: 2px solid #e6e6e6;
   border-right: 2px solid #e6e6e6;
 }
-.popUpBackground__options h2::after {
+.popUpBackgroundOption__options h2::after {
   content: "";
   position: absolute;
   left: -1rem;
@@ -108,12 +131,12 @@
   border-bottom: 2px solid #e6e6e6;
   border-left: 2px solid #e6e6e6;
 }
-.popUpBackground__options__carroussel {
+.popUpBackgroundOption__options__carroussel {
   display: flex;
   align-items: center;
   justify-content: center;
 }
-.popUpBackground__options__carroussel__container {
+.popUpBackgroundOption__options__carroussel__container {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
@@ -121,23 +144,23 @@
   overflow: hidden;
   height: auto;
 }
-.popUpBackground__options__carroussel__container__nom-cartes {
+.popUpBackgroundOption__options__carroussel__container__nom-cartes {
   padding: 0;
   font-size: 2rem;
   font-weight: 600;
 }
-.popUpBackground__options__carroussel__container__difficulte {
+.popUpBackgroundOption__options__carroussel__container__difficulte {
   padding: 0;
   font-size: 1.5rem;
 }
-.popUpBackground__options__carroussel__container__liste-cartes {
+.popUpBackgroundOption__options__carroussel__container__liste-cartes {
   display: flex;
   align-items: center;
   /* La valeur de width correspond à la largeur des images des cartes */
   width: 286px;
   gap: 3rem;
 }
-.popUpBackground__options__carroussel__container__liste-cartes__carte {
+.popUpBackgroundOption__options__carroussel__container__liste-cartes__carte {
   height: 300px;
   flex-shrink: 0;
   flex-grow: 0;
@@ -147,11 +170,11 @@
      object-fit: scale-down;
   width: 286px;
 }
-.popUpBackground__options__carroussel__container__etoiles {
+.popUpBackgroundOption__options__carroussel__container__etoiles {
   display: flex;
   gap: 0.5rem;
 }
-.popUpBackground__options__carroussel__container button {
+.popUpBackgroundOption__options__carroussel__container button {
   margin: 1rem;
 }
 
@@ -205,7 +228,7 @@
   .logo-et-nom-du-jeu__logo {
     height: 10rem;
   }
-  .popUpBackground__options {
+  .popUpBackgroundOption__options {
     position: relative;
     height: 100vh;
     width: 100vw;
