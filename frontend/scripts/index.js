@@ -1,6 +1,9 @@
-import { fermerConnexion } from './connexion.js'
-import { ouvrirInscription } from './connexion.js'
-import { fermerInscription } from './connexion.js'
+import {
+    fermerInscription,
+    EnregistrerUtilisateur,
+    ouvrirInscription,
+    fermerConnexion,
+} from './connexion&inscription.js'
 
 export async function ouvrirConnexion() {
     if (document.querySelector('.popUpBackgroundConnexion')) {
@@ -16,4 +19,5 @@ export async function ouvrirConnexion() {
     fermerConnexion()
     ouvrirInscription()
     fermerInscription()
+    EnregistrerUtilisateur()
 }

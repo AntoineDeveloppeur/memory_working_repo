@@ -48,3 +48,50 @@ export function fermerInscription() {
         }
     }
 }
+
+export async function EnregistrerUtilisateur() {
+    const formulaire = document.querySelector(
+        '.popUpBackgroundInscription__inscription__signUpForm'
+    )
+
+    formulaire.addEventListener('submit', async (event) => {
+        event.preventDefault()
+        const email = document.getElementById('email--inscription')
+        console.log('email', email.value)
+        const password = document.getElementById('password--inscription')
+        console.log('password', password.value)
+        const userData = {
+            email: email.value,
+            password: password.value,
+        }
+
+        try {
+            const response = await fetch(
+                'http://localhost:3000/api/utilisateurs',
+                {
+                    method: 'POST',
+                    headers: {
+                        'Content-Type': 'application/json',
+                    },
+                    body: JSON.stringify(userData),
+                }
+            )
+
+            if (response.ok) {
+                const result = await response.json()
+                console.log("l'utilisateur a été créé avec succès")
+            } else {
+                const error = await response.json()
+                console.log(
+                    "Erreur lors de la création de l'utilisateur",
+                    error
+                )
+            }
+        } catch (error) {
+            console.log(
+                "erreur réseau lors de la création de l'utilisateur",
+                error
+            )
+        }
+    })
+}

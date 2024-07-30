@@ -1,6 +1,7 @@
 const express = require('express')
 const mongoose = require('mongoose')
 const routerCartes = require('./routes/Cartes')
+const routerUtilisateurs = require('./routes/Utilisateurs')
 require('dotenv').config()
 
 const app = express()
@@ -40,6 +41,7 @@ app.use((req, res, next) => {
 })
 
 app.use('/api/cartes', routerCartes)
+app.use('/api/utilisateurs', routerUtilisateurs)
 
 // app.use('/', (req, res, next) => {
 //     console.log('requpete vierge réussie')

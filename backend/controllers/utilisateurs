@@ -1,0 +1,23 @@
+const bcrypt = require('bcrypt')
+const Utilisateur = require('../models/utilisateur')
+
+exports.enregistrerUtilisateur = (req, res, next) => {
+    bcrypt
+        .hash(req.body.password, 10)
+        .then((hashPassword) => {
+            const schemaUtilisateur = new Utilisateur({
+                email: req.body.email,
+                password: hashPassword,
+            })
+            schemaUtilisateur
+                .save()
+                .then(() => {
+                    console.log('utilisteur enregistré dans le backend')
+                    res.status(201).json({
+                        message: 'utilisateur enregistré dans le backend',
+                    })
+                })
+                .catch((error) => res.status(400).json({ error }))
+        })
+        .catch((error) => res.status(400).json({ error }))
+}
